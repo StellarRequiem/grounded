@@ -1,0 +1,38 @@
+[project]
+name = "grounded-check"
+version = "0.1.0"
+description = "Research you can't hallucinate — verify that every claim in a cited report is actually supported by the source it cites, catching fabricated and mismatched citations. Deterministic, no API."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "StellarRequiem" }]
+keywords = ["ai", "research", "citations", "hallucination", "fact-check", "grounding", "trustworthy", "llm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.scripts]
+grounded = "grounded.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/StellarRequiem/grounded"
+Repository = "https://github.com/StellarRequiem/grounded"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["grounded"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
