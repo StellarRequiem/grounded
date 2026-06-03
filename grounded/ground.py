@@ -14,7 +14,7 @@ _STOP = set(
     "these those as by at from into over under not no will can could would should may "
     "might do does did has have had its their his her our your my we you they he she i "
     "than then so but if about more most some all each per via using used also".split())
-_NUM = re.compile(r"\d[\d,]*\.?\d*")
+_NUM = re.compile(r"\d[\d,]*(?:\.\d+)?")   # number with optional decimal — no trailing dot
 _WORD = re.compile(r"[A-Za-z][A-Za-z\-]{2,}")
 
 
