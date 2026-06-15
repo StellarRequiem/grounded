@@ -1,5 +1,7 @@
 # grounded
 
+[![ci](https://github.com/StellarRequiem/grounded/actions/workflows/ci.yml/badge.svg)](https://github.com/StellarRequiem/grounded/actions/workflows/ci.yml)
+
 **Research you can't hallucinate — verify that every claim in a cited report is actually supported by the source it cites.**
 
 AI research tools cite confidently and wrongly: a claim with a footnote whose source says nothing of the kind. `grounded` reads a cited report, fetches each source, and flags any claim whose source doesn't even contain its key facts or numbers — **fabricated and mismatched citations**, the failure that makes AI research untrustworthy.
